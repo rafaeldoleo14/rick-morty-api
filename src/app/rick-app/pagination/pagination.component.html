@@ -1,0 +1,22 @@
+
+<div class="pagination-container">
+
+    <h1 class="title">All characters</h1>
+
+    <div class="pagination-content">
+
+        <button [disabled]="pagination === 1"
+        (click)="counter(-1)">
+            <i class="bi bi-arrow-left-circle-fill"></i>
+        </button>
+
+        <p>{{pagination}}</p>
+
+        <button [disabled]="pagination === 42"
+        (click)="counter(1)">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+        </button>
+
+    </div>
+    
+</div>

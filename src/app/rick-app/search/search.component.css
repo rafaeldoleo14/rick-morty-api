@@ -1,0 +1,10 @@
+
+.search-container input{
+    background-color: black;
+    border: none;
+    outline: none;
+    border-bottom: 5px solid var(--main-color);
+    padding: 10px;
+    color: white;
+    font-size: 1.2em;
+}
