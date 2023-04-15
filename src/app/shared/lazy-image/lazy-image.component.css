@@ -1,0 +1,6 @@
+
+img{
+  width: 12em;
+  border-radius: 100%;
+  border: 5px solid var(--main-color);
+}
