@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { RickAppService } from '../service/rick-app.service';
+import { RickAppService } from '../../service/rick-app.service';
+import { RickAPIData } from '../../interface/rick-app.interface';
+
 
 @Component({
   selector: 'app-pagination',
@@ -15,8 +17,11 @@ export class PaginationComponent {
   counter(value: number):void{
 
     this.pagination += value;
-    this.rickAppService.pagination = this.pagination.toString();
-    this.rickAppService.getResult('');
+    this.rickAppService.setPagination(this.pagination.toString());
+    this.rickAppService.getResult()
+    .subscribe((resp: RickAPIData)=>{
+      this.rickAppService.setCharacter(resp.results);
+    })
 
   }
 

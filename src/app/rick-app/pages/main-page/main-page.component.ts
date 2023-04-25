@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RickAppService } from '../service/rick-app.service';
+import { RickAppService } from '../../service/rick-app.service';
 
 
 @Component({

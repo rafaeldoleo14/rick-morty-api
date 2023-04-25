@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainPageComponent } from './main-page/main-page.component';
 import { FormsModule } from '@angular/forms';
-import { PaginationComponent } from './pagination/pagination.component';
-import { SearchComponent } from './search/search.component';
-import { CharactersComponent } from './characters/characters.component';
 import { SharedModule } from '../shared/shared.module';
-
+import {HttpClientModule} from '@angular/common/http'
+import { CharactersComponent } from './components/characters/characters.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
+import { SearchComponent } from './components/search/search.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { CharacterPageComponent } from './pages/character-page/character-page.component';
 
 @NgModule({
   declarations: [
     MainPageComponent,
+    CharactersComponent,
     PaginationComponent,
     SearchComponent,
-    CharactersComponent,
+    CharacterPageComponent
   ],
   exports: [
     MainPageComponent
@@ -21,7 +23,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ]
 })
 export class RickAppModule { }

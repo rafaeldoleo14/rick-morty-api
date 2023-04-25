@@ -10,11 +10,12 @@ nav img{
     width: 10em;
 }
 
-nav div a{
+nav div p{
     text-decoration: none;
     color: var(--main-color);
+    cursor: pointer;
 }
 
-nav div a:hover{
+nav div p:hover{
     text-decoration: underline;
 }

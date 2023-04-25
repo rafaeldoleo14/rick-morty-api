@@ -5,8 +5,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { RickAppModule } from './rick-app/rick-app.module';
 import { FormsModule } from '@angular/forms';
-
-
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +14,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
     SharedModule,
     RickAppModule,
   ],
