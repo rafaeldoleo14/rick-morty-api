@@ -3,7 +3,8 @@
 
     <ng-container *ngIf="characters.length; else notFound">
 
-        <div class="character-card" *ngFor="let character of characters">
+        <div [routerLink]="['/character', character.id]" routerLinkActive="router-link-active"
+        class="character-card" *ngFor="let character of characters">
 
             <app-lazy-image [url]="character.image"></app-lazy-image>
 
@@ -12,13 +13,12 @@
             </h3>
 
             <ul>
-                <li>Status: {{character.status}}</li>
-                <li>Specie: {{character.species}}</li>
+                <li><span>Status:</span> {{character.status}}</li>
+                <li><span>Specie:</span> {{character.species}}</li>
 
-                <li>Last location: {{character.location.name | slice:0:15}}
+                <li><span>Last location:</span> {{character.location.name | slice:0:15}}
                     {{ character.location.name.length > 15 ? '...' : '' }}
                 </li>
-
             </ul>
 
         </div>

@@ -16,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     AppRoutingModule,
     SharedModule,
-    RickAppModule,
+    RickAppModule
   ],
   providers: [],
   bootstrap: [AppComponent]

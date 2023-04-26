@@ -8,6 +8,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { SearchComponent } from './components/search/search.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { CharacterPageComponent } from './pages/character-page/character-page.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CharacterPageComponent } from './pages/character-page/character-page.co
     CommonModule,
     FormsModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ]
 })
 export class RickAppModule { }

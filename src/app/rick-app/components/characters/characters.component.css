@@ -20,6 +20,12 @@
     -webkit-box-shadow: 10px 10px 164px -92px var(--main-color);
     -moz-box-shadow: 10px 10px 164px -92px var(--main-color);
     box-shadow: 10px 10px 164px -92px var(--main-color);
+    cursor: pointer;
+    transition: all 0.55s ease;
+}
+
+.character-container .character-card:hover{
+  transform: scale(1.1);
 }
 
 .character-container .character-card h3{
@@ -32,6 +38,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    color: rgba(156, 234, 46, 0.811);
     font-weight: 600;
+}
+
+.character-container .character-card ul span{
+    color: rgba(156, 234, 46, 0.811);
 }

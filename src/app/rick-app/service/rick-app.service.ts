@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Result, RickAPIData } from '../interface/rick-app.interface';
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, catchError, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -41,6 +41,14 @@ export class RickAppService {
   getResult(): Observable<RickAPIData>{
     const url = `${this.baseURL}character?page=${this._pagination}`;
     return this.http.get<RickAPIData>(url);
+  }
+
+  getSingleCharacter(id: string): Observable<Result | null>{
+    const url = `${this.baseURL}character/${id}`;
+    return this.http.get<Result>(url)
+    .pipe(
+      catchError(error => of(null))
+    );
   }
 
 }
