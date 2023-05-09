@@ -1,1 +1,23 @@
-<p>character-page works!</p>
+
+<div class="character-cont">
+
+  <img [src]="character?.image" alt="">
+
+  <div>
+
+    <h1>{{character?.name}}</h1>
+
+    <p> <i class="bi bi-circle-fill" [ngStyle]="{color: character?.status | status}"></i>
+      {{character?.status}} - {{character?.species}}
+    </p>
+
+    <div class="location">
+      <p><span>Last known location:</span> {{character?.location?.name}}</p>
+    </div>
+
+    <button (click)="onBack()" class="btn"><i class="bi bi-arrow-left-circle-fill"></i> Atras</button>
+
+
+  </div>
+
+</div>

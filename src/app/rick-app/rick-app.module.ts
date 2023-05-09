@@ -9,6 +9,7 @@ import { SearchComponent } from './components/search/search.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { CharacterPageComponent } from './pages/character-page/character-page.component';
 import { RouterModule } from '@angular/router';
+import { StatusPipe } from './pipes/status.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RouterModule } from '@angular/router';
     CharactersComponent,
     PaginationComponent,
     SearchComponent,
-    CharacterPageComponent
+    CharacterPageComponent,
+    StatusPipe
   ],
   exports: [
     MainPageComponent

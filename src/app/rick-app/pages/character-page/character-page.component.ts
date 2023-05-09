@@ -27,8 +27,13 @@ export class CharacterPageComponent  implements OnInit{
         return;
       };
 
+      console.log(character)
       return this.character = character;
     })
+  }
+
+  onBack():void{
+    this.router.navigateByUrl('/home');
   }
 
 }
